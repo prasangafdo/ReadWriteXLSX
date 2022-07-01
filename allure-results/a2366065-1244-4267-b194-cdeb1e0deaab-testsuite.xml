@@ -1,0 +1,65 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1656693984795' stop='1656693986853'>
+    <name>Ikman.lk</name>
+    <title>Ikman.lk</title>
+    <test-cases>
+        <test-case start='1656693984795' status='failed' stop='1656693986853'>
+            <name>test the page is loading</name>
+            <title>test the page is loading</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.66'/>
+            </parameters>
+            <steps>
+                <step start='1656693984797' status='passed' stop='1656693986705'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='6868064d-6515-44d5-8185-62334d2da1c7-attachment.json' type='application/json' size='41'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656693986706' status='passed' stop='1656693986727'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='5e61a379-1608-4eaa-8032-5cf80cf802ed-attachment.json' type='application/json' size='99'/>
+                        <attachment title='Response' source='e5c37ea3-053d-44c3-bd0b-ab342ef1fa33-attachment.json' type='application/json' size='1069'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656693986732' status='passed' stop='1656693986742'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='29d20d37-8ce9-428f-b2d4-15ea13a06468-attachment.json' type='application/json' size='99'/>
+                        <attachment title='Response' source='3d978a3f-c659-499b-b1be-0b9f9b3806b3-attachment.json' type='application/json' size='1069'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656693986750' status='passed' stop='1656693986852'>
+                    <name>GET /session/:sessionId/screenshot</name>
+                    <title>GET /session/:sessionId/screenshot</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='a8c366a3-ed59-4ea3-b48c-7fa371a70ca3-attachment.png' type='image/png' size='64160'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>expect(received).toBeTruthy()
+                
+                Received: false</message>
+                <stack-trace>Error: expect(received).toBeTruthy()
+                
+                Received: false
+                    at Context.&lt;anonymous> (C:\Users\Prasanga Fernando\WebstormProjects\ReadWriteXLSX\test\specs\example.e2e.ts:8:57)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
