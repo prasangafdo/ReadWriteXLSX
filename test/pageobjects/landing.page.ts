@@ -12,12 +12,12 @@ class LandingPage extends Page {
         return super.open('');
     }
 
-    async isCompanyLogoDisplaying(){
-        return this.imgCompanyLogo.isDisplayed()
-    }
-    async navigateToVehicles(){
-        await this.lnkVehicles.click()
-    }
+    // async isCompanyLogoDisplaying(){
+    //     return this.imgCompanyLogo.isDisplayed()
+    // }
+    // async navigateToVehicles(){
+    //     await this.lnkVehicles.click()
+    // }
 
 
 }

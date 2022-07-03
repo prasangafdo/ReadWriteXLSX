@@ -1,0 +1,92 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1656827770398' stop='1656827791095'>
+    <name>Ikman.lk</name>
+    <title>Ikman.lk</title>
+    <test-cases>
+        <test-case start='1656827770399' status='passed' stop='1656827780752'>
+            <name>test the page is loading</name>
+            <title>test the page is loading</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.66'/>
+            </parameters>
+            <steps>
+                <step start='1656827770405' status='passed' stop='1656827780720'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='1f1ebf9a-b0b9-4087-8f06-ddf6e68a7e82-attachment.json' type='application/json' size='36'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656827780722' status='passed' stop='1656827780742'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='7b7f14ec-5a74-49a8-beac-479d94dc5c2e-attachment.json' type='application/json' size='99'/>
+                        <attachment title='Response' source='659992d6-4dca-4a14-9cbc-ce7df208e221-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656827780753' status='undefined'>
+                    <name>POST /session/:sessionId/execute/sync</name>
+                    <title>POST /session/:sessionId/execute/sync</title>
+                    <attachments>
+                        <attachment title='Request' source='809bd66b-01b3-4500-9f94-67950606538a-attachment.json' type='application/json' size='8337'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1656827780760' status='failed' stop='1656827791094'>
+            <name>test user can search cars </name>
+            <title>test user can search cars </title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.66'/>
+            </parameters>
+            <steps>
+                <step start='1656827780761' status='passed' stop='1656827780772'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='576392e6-8555-4228-8061-ab2fd381865b-attachment.json' type='application/json' size='36'/>
+                        <attachment title='Response' source='4f9bd35d-a750-4b84-9794-8d834492d95e-attachment.json' type='application/json' size='4'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656827789737' status='passed' stop='1656827791093'>
+                    <name>GET /session/:sessionId/screenshot</name>
+                    <title>GET /session/:sessionId/screenshot</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='a52094ef-f2ba-4c56-a523-5781d1dece79-attachment.png' type='image/png' size='185550'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>unknown error: cannot determine loading status
+                from unknown error: unexpected command response
+                  (Session info: chrome=103.0.5060.66)</message>
+                <stack-trace>unknown error: unknown error: cannot determine loading status
+                from unknown error: unexpected command response
+                  (Session info: chrome=103.0.5060.66)
+                    at getErrorFromResponseBody (C:\Users\Prasanga Fernando\WebstormProjects\ReadWriteXLSX\node_modules\webdriver\build\utils.js:198:12)
+                    at NodeJSRequest._request (C:\Users\Prasanga Fernando\WebstormProjects\ReadWriteXLSX\node_modules\webdriver\build\request\index.js:166:60)
+                    at async Browser.wrapCommandFn (C:\Users\Prasanga Fernando\WebstormProjects\ReadWriteXLSX\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async Browser.wrapCommandFn (C:\Users\Prasanga Fernando\WebstormProjects\ReadWriteXLSX\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async Context.&lt;anonymous> (C:\Users\Prasanga Fernando\WebstormProjects\ReadWriteXLSX\test\specs\example.e2e.ts:12:9)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
