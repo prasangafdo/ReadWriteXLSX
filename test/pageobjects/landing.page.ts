@@ -10,6 +10,8 @@ class LandingPage extends Page {
 
     public open () {
         return super.open('');
+
+
     }
 
     // async isCompanyLogoDisplaying(){

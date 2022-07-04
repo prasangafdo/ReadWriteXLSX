@@ -15,6 +15,10 @@ describe('Ikman.lk', () => {
         expect(await Vehicle.lblVehiclesTopic).toBeDisplayed()
         await Vehicle.closeAdPopup()
         expect(await Vehicle.lblVehiclesTopic).toHaveText('Vehicles')
+        await Vehicle.closeAdPopup()
+        await Vehicle.getLnkDistrict('Colombo')
+        await Vehicle.closeAdPopup()
+        await browser.pause(5000)
     });
 });
 

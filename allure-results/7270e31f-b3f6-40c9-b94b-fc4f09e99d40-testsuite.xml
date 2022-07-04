@@ -1,0 +1,135 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1656948111965' stop='1656948130049'>
+    <name>Ikman.lk</name>
+    <title>Ikman.lk</title>
+    <test-cases>
+        <test-case start='1656948111966' status='passed' stop='1656948119357'>
+            <name>test the page is loading</name>
+            <title>test the page is loading</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.66'/>
+            </parameters>
+            <steps>
+                <step start='1656948111969' status='passed' stop='1656948119256'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='5d306b57-5d48-4267-8e46-dfb615bf0d7f-attachment.json' type='application/json' size='36'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656948119258' status='passed' stop='1656948119348'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='af053254-25e1-45bf-83dc-c81043787794-attachment.json' type='application/json' size='99'/>
+                        <attachment title='Response' source='151dd96b-50ae-4cca-b01f-8a0976135020-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656948119357' status='undefined'>
+                    <name>POST /session/:sessionId/execute/sync</name>
+                    <title>POST /session/:sessionId/execute/sync</title>
+                    <attachments>
+                        <attachment title='Request' source='c9e5aa7a-e5e0-45b3-87ef-949845ad7241-attachment.json' type='application/json' size='8337'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1656948119361' status='broken' stop='1656948130048'>
+            <name>test user can search cars </name>
+            <title>test user can search cars </title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.66'/>
+            </parameters>
+            <steps>
+                <step start='1656948119362' status='passed' stop='1656948119372'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='4b7271fa-96df-48e6-b8bb-e4f7cb9df4bb-attachment.json' type='application/json' size='68'/>
+                        <attachment title='Response' source='aae104f7-77bc-41e4-937f-64309454e45f-attachment.json' type='application/json' size='4'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656948119382' status='broken' stop='1656948130048'>
+                    <name>POST /session/:sessionId/element/ad8a2735-b5ee-4ca4-8e34-756a2c9c65d7/click</name>
+                    <title>POST /session/:sessionId/element/ad8a2735-b5ee-4ca4-8e34-756a2c9c65d7/click</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1656948125349' status='passed' stop='1656948125359'>
+                            <name>POST /session/:sessionId/element</name>
+                            <title>POST /session/:sessionId/element</title>
+                            <attachments>
+                                <attachment title='Request' source='f71089aa-bbc1-4672-b878-6ff6d42eaf90-attachment.json' type='application/json' size='68'/>
+                                <attachment title='Response' source='33230301-d3ef-4962-9bdc-0eee7c396f19-attachment.json' type='application/json' size='83'/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                        <step start='1656948125360' status='broken' stop='1656948130048'>
+                            <name>POST /session/:sessionId/element/ad8a2735-b5ee-4ca4-8e34-756a2c9c65d7/click</name>
+                            <title>POST /session/:sessionId/element/ad8a2735-b5ee-4ca4-8e34-756a2c9c65d7/click</title>
+                            <attachments/>
+                            <steps>
+                                <step start='1656948125367' status='passed' stop='1656948125378'>
+                                    <name>POST /session/:sessionId/element</name>
+                                    <title>POST /session/:sessionId/element</title>
+                                    <attachments>
+                                        <attachment title='Request' source='9bb66dab-8421-44f7-a524-6e71752a5376-attachment.json' type='application/json' size='68'/>
+                                        <attachment title='Response' source='79ec6821-dd69-4a82-84f2-0ddfd3639023-attachment.json' type='application/json' size='83'/>
+                                    </attachments>
+                                    <steps/>
+                                </step>
+                                <step start='1656948125380' status='broken' stop='1656948130048'>
+                                    <name>POST /session/:sessionId/element/f56da33b-a51c-4b91-b411-b19decd770e0/click</name>
+                                    <title>POST /session/:sessionId/element/f56da33b-a51c-4b91-b411-b19decd770e0/click</title>
+                                    <attachments/>
+                                    <steps>
+                                        <step start='1656948129594' status='passed' stop='1656948130048'>
+                                            <name>GET /session/:sessionId/screenshot</name>
+                                            <title>GET /session/:sessionId/screenshot</title>
+                                            <attachments>
+                                                <attachment title='Screenshot' source='552a69ea-2059-4952-98e3-2639d84f01cd-attachment.png' type='image/png' size='1008888'/>
+                                            </attachments>
+                                            <steps/>
+                                        </step>
+                                    </steps>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Response' source='56d8099c-1b35-4d1e-95a5-b156d406bd44-attachment.json' type='application/json' size='83'/>
+            </attachments>
+            <failure>
+                <message>element click intercepted: Element &lt;a aria-current="page" class="gtm-chat-click header-link--woAbP active" aria-label="Chat" rel="nofollow" href="/en/ads/sri-lanka/vehicles?login-modal=true&amp;amp;redirect-url=/en/chat&amp;amp;action=chat">...&lt;/a> is not clickable at point (1147, 32). Other element would receive the click: &lt;iframe id="PicMe_RDB_D_-frame" src="https://bit.ly/3MSBOek" width="1920px" height="934px" frameborder="no" scrolling="no">&lt;/iframe>
+                  (Session info: chrome=103.0.5060.66)</message>
+                <stack-trace>element click intercepted: element click intercepted: Element &lt;a aria-current="page" class="gtm-chat-click header-link--woAbP active" aria-label="Chat" rel="nofollow" href="/en/ads/sri-lanka/vehicles?login-modal=true&amp;amp;redirect-url=/en/chat&amp;amp;action=chat">...&lt;/a> is not clickable at point (1147, 32). Other element would receive the click: &lt;iframe id="PicMe_RDB_D_-frame" src="https://bit.ly/3MSBOek" width="1920px" height="934px" frameborder="no" scrolling="no">&lt;/iframe>
+                  (Session info: chrome=103.0.5060.66)
+                    at getErrorFromResponseBody (C:\Users\Prasanga Fernando\WebstormProjects\ReadWriteXLSX\node_modules\webdriver\build\utils.js:198:12)
+                    at NodeJSRequest._request (C:\Users\Prasanga Fernando\WebstormProjects\ReadWriteXLSX\node_modules\webdriver\build\request\index.js:166:60)
+                    at async Element.wrapCommandFn (C:\Users\Prasanga Fernando\WebstormProjects\ReadWriteXLSX\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async Element.wrapCommandFn (C:\Users\Prasanga Fernando\WebstormProjects\ReadWriteXLSX\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async Element.elementErrorHandlerCallbackFn (C:\Users\Prasanga Fernando\WebstormProjects\ReadWriteXLSX\node_modules\webdriverio\build\middlewares.js:24:32)
+                    at async Element.wrapCommandFn (C:\Users\Prasanga Fernando\WebstormProjects\ReadWriteXLSX\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async Element.wrapCommandFn (C:\Users\Prasanga Fernando\WebstormProjects\ReadWriteXLSX\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async Element.elementErrorHandlerCallbackFn (C:\Users\Prasanga Fernando\WebstormProjects\ReadWriteXLSX\node_modules\webdriverio\build\middlewares.js:44:28)
+                    at async Element.wrapCommandFn (C:\Users\Prasanga Fernando\WebstormProjects\ReadWriteXLSX\node_modules\@wdio\utils\build\shim.js:137:29)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

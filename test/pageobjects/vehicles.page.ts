@@ -18,6 +18,10 @@ class VehiclesPage extends Page {
         }
     }
 
+    async getLnkDistrict(district){
+        return $("//span[normalize-space()='"+district+"']/ancestor::a")
+    }
+
 }
 
 export default new VehiclesPage();
