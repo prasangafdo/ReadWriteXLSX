@@ -1,5 +1,5 @@
 import type { Options } from '@wdio/types'
-
+var fs = require('fs');
 export const config: Options.Testrunner = {
     //
     // ====================
@@ -88,9 +88,14 @@ export const config: Options.Testrunner = {
         browserName: 'chrome',
         acceptInsecureCerts: true,
         'goog:chromeOptions':{
-            args:[
-                '-start-maximized'
-        ]
+            extensions:[
+                fs.readFileSync('C:/Users/Prasanga Fernando/Desktop/automation crx/adblock_chrome.crx',{encoding: 'base64'}),
+            ]
+        //     args:[
+        //         '-start-maximized',
+        //
+        //         fs.readFileSync('C:/Users/Prasanga Fernando/Desktop/automation crx/adblock_chrome.crx',{encoding: 'base64'}),
+        // ]
         }
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
