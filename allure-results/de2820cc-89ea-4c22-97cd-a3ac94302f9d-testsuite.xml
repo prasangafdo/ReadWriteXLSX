@@ -1,0 +1,72 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1657038914752' stop='1657038985000'>
+    <name>Ikman.lk</name>
+    <title>Ikman.lk</title>
+    <test-cases>
+        <test-case start='1657038914753' status='passed' stop='1657038924979'>
+            <name>test the page is loading</name>
+            <title>test the page is loading</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.66'/>
+            </parameters>
+            <steps>
+                <step start='1657038914755' status='passed' stop='1657038924879'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='87654ee8-3494-44ee-9136-c9760d665745-attachment.json' type='application/json' size='36'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1657038924882' status='passed' stop='1657038924969'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='a6fc92a1-1265-4b6d-a3f4-deeb7bcfa702-attachment.json' type='application/json' size='99'/>
+                        <attachment title='Response' source='59716666-7a10-40e7-b425-9910eeb65db6-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1657038924980' status='undefined'>
+                    <name>POST /session/:sessionId/execute/sync</name>
+                    <title>POST /session/:sessionId/execute/sync</title>
+                    <attachments>
+                        <attachment title='Request' source='a1399ea6-53e6-420d-99cb-ac9366dd82b5-attachment.json' type='application/json' size='8703'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1657038924985' status='broken' stop='1657038984998'>
+            <name>test user can search cars </name>
+            <title>test user can search cars </title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.66'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Response' source='476cacdb-48c9-4eb2-a707-8e3809b95d94-attachment.json' type='application/json' size='4'/>
+            </attachments>
+            <failure>
+                <message>Timeout of 60000ms exceeded. The execution in the test "Ikman.lk test user can search cars " took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (C:\Users\Prasanga Fernando\WebstormProjects\ReadWriteXLSX\test\specs\example.e2e.ts)</message>
+                <stack-trace>Error: Timeout of 60000ms exceeded. The execution in the test "Ikman.lk test user can search cars " took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (C:\Users\Prasanga Fernando\WebstormProjects\ReadWriteXLSX\test\specs\example.e2e.ts)
+                    at createTimeoutError (C:\Users\Prasanga Fernando\WebstormProjects\ReadWriteXLSX\node_modules\mocha\lib\errors.js:498:15)
+                    at Test.Runnable._timeoutError (C:\Users\Prasanga Fernando\WebstormProjects\ReadWriteXLSX\node_modules\mocha\lib\runnable.js:431:10)
+                    at Timeout.&lt;anonymous> (C:\Users\Prasanga Fernando\WebstormProjects\ReadWriteXLSX\node_modules\mocha\lib\runnable.js:246:24)
+                    at listOnTimeout (internal/timers.js:557:17)
+                    at processTimers (internal/timers.js:500:7)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

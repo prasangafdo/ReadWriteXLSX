@@ -1,0 +1,5 @@
+{
+  "error": "no such element",
+  "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[contains(@href,'vehicles')]\"}\n  (Session info: chrome=103.0.5060.66)",
+  "stacktrace": "Backtrace:\n\tOrdinal0 [0x00C06463+2188387]\n\tOrdinal0 [0x00B9E461+1762401]\n\tOrdinal0 [0x00AB3D78+802168]\n\tOrdinal0 [0x00AE1880+989312]\n\tOrdinal0 [0x00AE1B1B+989979]\n\tOrdinal0 [0x00B0E912+1173778]\n\tOrdinal0 [0x00AFC824+1099812]\n\tOrdinal0 [0x00B0CC22+1166370]\n\tOrdinal0 [0x00AFC5F6+1099254]\n\tOrdinal0 [0x00AD6BE0+945120]\n\tOrdinal0 [0x00AD7AD6+948950]\n\tGetHandleVerifier [0x00EA71F2+2712546]\n\tGetHandleVerifier [0x00E9886D+2652765]\n\tGetHandleVerifier [0x00C9002A+520730]\n\tGetHandleVerifier [0x00C8EE06+516086]\n\tOrdinal0 [0x00BA468B+1787531]\n\tOrdinal0 [0x00BA8E88+1805960]\n\tOrdinal0 [0x00BA8F75+1806197]\n\tOrdinal0 [0x00BB1DF1+1842673]\n\tBaseThreadInitThunk [0x7781FA29+25]\n\tRtlGetAppContainerNamedObjectPath [0x77C77A9E+286]\n\tRtlGetAppContainerNamedObjectPath [0x77C77A6E+238]\n"
+}
