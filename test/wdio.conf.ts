@@ -89,7 +89,7 @@ export const config: Options.Testrunner = {
         acceptInsecureCerts: true,
         'goog:chromeOptions':{
             extensions:[
-                fs.readFileSync('C:/Users/Prasanga Fernando/Desktop/automation crx/adblock_chrome.crx',{encoding: 'base64'}),
+                fs.readFileSync('./test/resources/adblock_chrome.crx',{encoding: 'base64'}),
             ]
         //     args:[
         //         '-start-maximized',
