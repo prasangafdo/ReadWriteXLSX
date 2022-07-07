@@ -10,9 +10,18 @@ class LandingPage extends Page {
 
     public open () {
         return super.open('');
-
-
     }
+
+    async switchToAdvertisementTab(){
+        const handles = await browser.getWindowHandles();
+        // if ( handles.length > 1) {
+        //     await browser.switchToWindow(handles[1]);
+        //     await browser.closeWindow();
+        //     await browser.pause(9000)
+        //     console.log('------------------>',handles.length)
+        // }
+
+}
 
     // async isCompanyLogoDisplaying(){
     //     return this.imgCompanyLogo.isDisplayed()
