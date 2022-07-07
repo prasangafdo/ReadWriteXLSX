@@ -13,15 +13,15 @@ describe('Ikman.lk', () => {
         // await Landing.open();
         await browser.pause(2000)
         await AdBlock.closeAdBlockTab()
-        // await Landing.lnkVehicles.click()
-        // await browser.pause(5000)
-        // expect(await Vehicle.lblVehiclesTopic).toBeDisplayed()
-        // await Vehicle.closeAdPopup()
-        // expect(await Vehicle.lblVehiclesTopic).toHaveText('Vehicles')
-        // await Vehicle.closeAdPopup()
-        // await Vehicle.getLnkDistrict('Colombo')
-        // await Vehicle.closeAdPopup()
-        // await browser.pause(5000)
+        await Landing.lnkVehicles.click()
+        await browser.pause(5000)
+        expect(await Vehicle.lblVehiclesTopic).toBeDisplayed()
+        await Vehicle.closeAdPopup()
+        expect(await Vehicle.lblVehiclesTopic).toHaveText('Vehicles')
+        await Vehicle.closeAdPopup()
+        await Vehicle.getLnkDistrict('Colombo')
+        await Vehicle.closeAdPopup()
+        await browser.pause(5000)
     });//[@section='content column logo-section']//*[name()='svg']
 });
 
