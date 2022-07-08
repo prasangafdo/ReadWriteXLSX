@@ -13,13 +13,22 @@ class LandingPage extends Page {
     }
 
     async switchToAdvertisementTab(){
-        const handles = await browser.getWindowHandles();
-        // if ( handles.length > 1) {
-        //     await browser.switchToWindow(handles[1]);
-        //     await browser.closeWindow();
-        //     await browser.pause(9000)
-        //     console.log('------------------>',handles.length)
-        // }
+        let handles = await browser.getWindowHandles();
+        console.log("---------->",handles)
+        if ( handles.length > 1) {
+            // let title = await browser.getTitle()
+            // if(title.includes("Ad block")){
+            //     await browser.closeWindow()
+            // }
+            // else{
+                await browser.switchWindow('Adblock');
+                // console.log("---------->",await browser.getTitle())
+                await browser.closeWindow();
+                await browser.pause(1000)
+            await browser.switchWindow('ikman')
+            // }
+        }
+        console.log("---------->",await browser.getTitle())
 
 }
 
