@@ -12,6 +12,15 @@ class VehiclesPage extends Page {
     get lblLocation(){
         return $("//button[contains(@class,'location')]//child::div[@class='ellipsis--AX_lz']")
     }
+    get btnPrice(){
+        return $("//button[normalize-space()='Price (Rs)']")
+    }
+    get txtMinPrice(){
+        return $("//button[normalize-space()='Price (Rs)']/parent::div//input[@aria-label='Min']")
+    }
+    get txtMaxPrice(){
+        return $("//button[normalize-space()='Price (Rs)']/parent::div//input[@aria-label='Max']")
+    }
 
     async closeAdPopup(){
         await browser.pause(1000)
@@ -24,11 +33,11 @@ class VehiclesPage extends Page {
     async getLnkDistrict(district){
         return $("//span[normalize-space()='"+district+"']/ancestor::a")
     }
-
     async openVehiclesByDistrict(value){
         let district = await this.getLnkDistrict(value)
         await district.click()
     }
+
 
 }
 
