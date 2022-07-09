@@ -9,6 +9,9 @@ class VehiclesPage extends Page {
     get btnCloseAdPopup(){
         return $('#dismiss-button')
     }
+    get lblLocation(){
+        return $("//button[contains(@class,'location')]//child::div[@class='ellipsis--AX_lz']")
+    }
 
     async closeAdPopup(){
         await browser.pause(1000)
@@ -20,6 +23,11 @@ class VehiclesPage extends Page {
 
     async getLnkDistrict(district){
         return $("//span[normalize-space()='"+district+"']/ancestor::a")
+    }
+
+    async openVehiclesByDistrict(value){
+        let district = await this.getLnkDistrict(value)
+        await district.click()
     }
 
 }
