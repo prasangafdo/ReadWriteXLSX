@@ -27,6 +27,9 @@ class VehiclesPage extends Page {
     get btnCars(){
         return $("//span[text()='Cars']//ancestor::button")
     }
+    get lnkAds(){
+        return $("//ul[@class='list--3NxGO']/li/a")
+    }
 
 
     async closeAdPopup(){
