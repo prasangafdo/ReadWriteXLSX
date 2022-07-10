@@ -18,8 +18,11 @@ describe('Ikman.lk', () => {
         expect(await Vehicle.lblVehiclesTopic).toHaveText('Vehicles')
         await Vehicle.openVehiclesByDistrict('Colombo')
         expect(await Vehicle.lblLocation.getText()).toHaveText('Colombo')
+        await Vehicle.btnCars.click()
         await Vehicle.btnPrice.click()
-
+        await Vehicle.txtMinPrice.setValue('100000')
+        await Vehicle.txtMaxPrice.setValue('1000000')
+        await Vehicle.btnApplyPrice.click()
         await browser.pause(5000)
     });//[@section='content column logo-section']//*[name()='svg']
 });

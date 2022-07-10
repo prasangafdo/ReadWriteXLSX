@@ -21,6 +21,13 @@ class VehiclesPage extends Page {
     get txtMaxPrice(){
         return $("//button[normalize-space()='Price (Rs)']/parent::div//input[@aria-label='Max']")
     }
+    get btnApplyPrice(){
+        return $("//button[normalize-space()='Price (Rs)']/parent::div//button[contains(@class,'apply')]")
+    }
+    get btnCars(){
+        return $("//span[text()='Cars']//ancestor::button")
+    }
+
 
     async closeAdPopup(){
         await browser.pause(1000)
