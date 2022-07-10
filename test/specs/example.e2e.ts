@@ -23,6 +23,7 @@ describe('Ikman.lk', () => {
         await Vehicle.txtMinPrice.setValue('100000')
         await Vehicle.txtMaxPrice.setValue('1000000')
         await Vehicle.btnApplyPrice.click()
+        await Vehicle.getAllAds()
         await browser.pause(5000)
     });//[@section='content column logo-section']//*[name()='svg']
 });

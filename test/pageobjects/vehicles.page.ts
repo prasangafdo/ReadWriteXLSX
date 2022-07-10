@@ -28,7 +28,7 @@ class VehiclesPage extends Page {
         return $("//span[text()='Cars']//ancestor::button")
     }
     get lnkAds(){
-        return $("//ul[@class='list--3NxGO']/li/a")
+        return $$("//ul[@class='list--3NxGO']/li/a")
     }
 
 
@@ -46,6 +46,11 @@ class VehiclesPage extends Page {
     async openVehiclesByDistrict(value){
         let district = await this.getLnkDistrict(value)
         await district.click()
+    }
+    async getAllAds(){
+        for (let element of await this.lnkAds){
+            console.log('=============>',await element.getText())
+        }
     }
 
 
