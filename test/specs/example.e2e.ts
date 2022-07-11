@@ -2,6 +2,7 @@ import SecurePage from '../pageobjects/secure.page';
 import Landing from '../pageobjects/landing.page';
 import AdBlock from '../pageobjects/adblock.page';
 import Vehicle from '../pageobjects/vehicles.page';
+import VehicleDetails from '../pageobjects/vehicle.details.page';
 
 describe('Ikman.lk', () => {
     it('test the page is loading', async () => {
@@ -23,7 +24,8 @@ describe('Ikman.lk', () => {
         await Vehicle.txtMinPrice.setValue('100000')
         await Vehicle.txtMaxPrice.setValue('1000000')
         await Vehicle.btnApplyPrice.click()
-        await Vehicle.getAllAds()
+        // await Vehicle.getAllAds()
+        await VehicleDetails.allAdDetails()
         await browser.pause(5000)
     });//[@section='content column logo-section']//*[name()='svg']
 });

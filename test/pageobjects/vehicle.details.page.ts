@@ -1,4 +1,5 @@
 import Page from './page';
+import Vehicle from './vehicles.page';
 
 class VehicleDetailsPage extends Page {
 
@@ -18,7 +19,14 @@ class VehicleDetailsPage extends Page {
         return $("//button[normalize-space()='Show more']")
     }
     get btnShowPhoneNumber(){
-        return $("//div[@class='display--s3dc8 card--_2NNk']//button[contains(@class,'show-number')]")
+        return $("//div[@class='display--s3dc8 card--_2NNk']//button[contains(@class,'show-number')].")
+    }
+
+    async allAdDetails(){
+        await browser.pause(2000)
+        for (let element of await Vehicle.getAllAds()){
+            console.log('=============>',await element.getText())
+        }
     }
 
 

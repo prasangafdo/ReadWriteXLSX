@@ -48,9 +48,10 @@ class VehiclesPage extends Page {
         await district.click()
     }
     async getAllAds(){
-        for (let element of await this.lnkAds){
-            console.log('=============>',await element.getText())
-        }
+        // for (let element of await this.lnkAds){
+        //     console.log('=============>',await element.getText())
+        // }
+        return this.lnkAds;
     }
 
 
