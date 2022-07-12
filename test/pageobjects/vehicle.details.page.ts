@@ -24,14 +24,37 @@ class VehicleDetailsPage extends Page {
 
     async allAdDetails(){
         await browser.pause(2000)
-        for (let element of await Vehicle.getAllAds()){
-            console.log('=============>',await element.getText())
-            await element.click()
-            console.log('=============>',await this.lblAdTitle.getText())
-            console.log('=============>',await this.lblLocation.getText())
-            console.log('=============>',await this.lblPrice.getText())
-            await browser.back()
-        }
+        // let vehicles = await Vehicle.getAllAds()
+        let promise = Promise.resolve(Vehicle.getAllAds());
+        promise.then(function(vehicles) {
+            vehicles.forEach(myFunction);
+
+            function myFunction(element) {
+            // }
+            // for (let element of vehicles) {
+                // console.log(val);
+                console.log('=============>', element.getText())
+                element.waitForDisplayed({timeout: 8000})
+                element.click()
+                // console.log('=============>',this.lblAdTitle.getText())
+                // console.log('=============>',this.lblLocation.getText())
+                // console.log('=============>',this.lblPrice.getText())
+                // browser.back()
+                // browser.pause(2000)
+            }
+        });
+
+
+        // for (let element of vehicles){
+        //     console.log('=============>',await element.getText())
+        //     await element.waitForDisplayed({timeout:8000})
+        //     await element.click()
+        //     console.log('=============>',await this.lblAdTitle.getText())
+        //     console.log('=============>',await this.lblLocation.getText())
+        //     console.log('=============>',await this.lblPrice.getText())
+        //     await browser.back()
+        //     await browser.pause(2000)
+        // }
     }
 
 
