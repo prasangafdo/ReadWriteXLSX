@@ -26,8 +26,9 @@ describe('Ikman.lk', () => {
         await Vehicle.btnApplyPrice.click()
         // await Vehicle.getAllAds()
         await VehicleDetails.allAdDetails()
-        await browser.pause(5000)
-    });//[@section='content column logo-section']//*[name()='svg']
+        // await VehicleDetails.getAAA(await VehicleDetails.allAdDetails())
+        // await browser.pause(5000)
+    }).timeout(900000);
 });
 
 
