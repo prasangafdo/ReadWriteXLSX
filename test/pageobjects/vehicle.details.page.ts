@@ -26,6 +26,11 @@ class VehicleDetailsPage extends Page {
         await browser.pause(2000)
         for (let element of await Vehicle.getAllAds()){
             console.log('=============>',await element.getText())
+            await element.click()
+            console.log('=============>',await this.lblAdTitle.getText())
+            console.log('=============>',await this.lblLocation.getText())
+            console.log('=============>',await this.lblPrice.getText())
+            await browser.back()
         }
     }
 
