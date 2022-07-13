@@ -19,7 +19,10 @@ class VehicleDetailsPage extends Page {
         return $("//button[normalize-space()='Show more']")
     }
     get btnShowPhoneNumber(){
-        return $("//div[@class='display--s3dc8 card--_2NNk']//button[contains(@class,'show-number')].")
+        return $("//div[@class='display--s3dc8 card--_2NNk']//button[contains(@class,'show-number')]")
+    }
+    get lblPhoneNumber(){
+        return $("//div[@class='phone-numbers--2COKR']")
     }
 
     async allAdDetails(){
@@ -40,14 +43,15 @@ class VehicleDetailsPage extends Page {
         for (let element of await Vehicle.getAllAds()){
             await element.waitForDisplayed({timeout:900000})
             await element.click()
-            console.log('=======h',await this.lblAdTitle.getText())
+            console.log('=======Vehicle: ',await this.lblAdTitle.getText())
+            console.log('=======Location: ',await this.lblLocation.getText())
+            console.log('=======Price: ',await this.lblPrice.getText())
+            console.log('=======year: ',await this.lblYear.getText())
+            await this.btnShowPhoneNumber.click()
+            console.log('=======Phone ',await this.lblPhoneNumber.getText())
             await browser.back()
             await browser.pause(2000)
         }
-
-    }
-
-    async getaaa(){
 
     }
 
