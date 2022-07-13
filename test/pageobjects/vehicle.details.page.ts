@@ -48,7 +48,7 @@ class VehicleDetailsPage extends Page {
             console.log('=======Price: ',await this.lblPrice.getText())
             console.log('=======year: ',await this.lblYear.getText())
             await this.btnShowPhoneNumber.click()
-            console.log('=======Phone ',await this.lblPhoneNumber.getText())
+            console.log('=======Phone: ',await this.lblPhoneNumber.getText())
             await browser.back()
             await browser.pause(2000)
         }

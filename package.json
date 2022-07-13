@@ -15,5 +15,8 @@
     },
     "scripts": {
         "wdio": "wdio run test/wdio.conf.ts"
+    },
+    "dependencies": {
+        "xlsx": "^0.18.5"
     }
 }
