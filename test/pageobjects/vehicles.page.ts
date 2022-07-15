@@ -43,9 +43,16 @@ class VehiclesPage extends Page {
     async getLnkDistrict(district){
         return $("//span[normalize-space()='"+district+"']/ancestor::a")
     }
-    async openVehiclesByDistrict(value){
-        let district = await this.getLnkDistrict(value)
-        await district.click()
+    async getVehicleCategory(category){
+        return $("//span[text()='"+category+"']//ancestor::button")
+    }
+
+    async openVehiclesByDistrict(valueArray){
+        for (let district of valueArray){
+            let element = await this.getLnkDistrict(district)
+            await element.click()
+        }
+
     }
     async getAllAds(){
         // for (let element of await this.lnkAds){
