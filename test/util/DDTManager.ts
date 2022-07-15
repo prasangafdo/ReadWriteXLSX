@@ -21,7 +21,11 @@ class DDTManager{
 
             await $("//span[normalize-space()='"+data.District+"']/ancestor::a").click()
             await Vehicles.btnCars.click()
-            await Vehicles.btnPrice.click()
+            if ( !await Vehicles.txtMinPrice.isDisplayed()){
+                await Vehicles.btnPrice.click()
+            }
+            await Vehicles.txtMinPrice.clearValue()
+            await Vehicles.txtMaxPrice.clearValue()
             await Vehicles.txtMinPrice.setValue(data.min_price)//Add a clear value
             await Vehicles.txtMaxPrice.setValue(data.max_price)
             await Vehicles.btnApplyPrice.click()
