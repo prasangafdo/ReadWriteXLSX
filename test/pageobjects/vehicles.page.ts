@@ -33,10 +33,10 @@ class VehiclesPage extends Page {
     get btnRestetBrand(){
         return $("//button[@type='reset']")
     }
-    get btnApplyPrice(){
+    get btnApplyBrand(){
         return $("//button[normalize-space()='Select brand']/parent::div//button[contains(@class,'apply')]")
     }
-    get btnApplyBrand(){
+    get btnApplyPrice(){
         return $("//button[normalize-space()='Price (Rs)']/parent::div//button[contains(@class,'apply')]")
     }
     get btnCars(){
@@ -70,9 +70,7 @@ class VehiclesPage extends Page {
 
     }
     async getAllAds(){
-        // for (let element of await this.lnkAds){
-        //     console.log('=============>',await element.getText())
-        // }
+        await browser.pause(3000)
         return this.lnkAds;
     }
 
