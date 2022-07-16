@@ -32,20 +32,30 @@ class DDTManager{
             await Vehicles.btnApplyPrice.click()
             let elementsArray = []
             await Vehicles.getAllAds().then(function (ttt) {
-                console.log('-----<', ttt)
                 for (let element of ttt){
                     elementsArray.push(element)
                 }
             })
             console.log('+++++++++<',elementsArray)
-            console.log('+++++++++<',await elementsArray[0].getText())
+            // console.log('+++++++++<',await elementsArray[0].getText())
 
-            // for (let vehicle of aaa){
-            //     console.log('}}}}}}}}}}}}}}}}',await vehicle.getText())
-            //     await vehicle.click()
-            //     console.log('--->',await VehicleDetails.lblAdTitle.getText())
-            //     await browser.back()
-            // }
+            for (let vehicle of elementsArray){
+                // console.log('}}}}}}}}}}}}}}}}',await vehicle.getText())
+                await vehicle.click()
+                // await browser.waitUntil(
+                //     async ()=>VehicleDetails.lblAdTitle.isExisting()
+                // )
+                if(!await VehicleDetails.lblAdTitle.isDisplayed()){
+                    await VehicleDetails.lblAdTitle.waitForDisplayed({timeout:60000})
+
+                    console.log('--->',await VehicleDetails.lblAdTitle.getText())
+                }
+                await VehicleDetails.lblAdTitle.waitForDisplayed({timeout:60000}).then(function (ttt) {
+                    console.log('--->',ttt)
+                })
+                // console.log('--->',await VehicleDetails.lblAdTitle.getText())
+                await browser.back()
+            }
             await browser.pause(5000)
 
             // console.log('---------District', await Vehicles.getLnkDistrict(data.District).click())
