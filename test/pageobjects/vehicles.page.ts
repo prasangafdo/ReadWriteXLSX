@@ -15,13 +15,28 @@ class VehiclesPage extends Page {
     get btnPrice(){
         return $("//button[normalize-space()='Price (Rs)']")
     }
+    get btnBrand(){
+        return $("//button[normalize-space()='Brand']")
+    }
+    get btnManufactureYear(){
+        return $("//button[normalize-space()='Year of Manufacture']")
+    }
+    get txtBrand(){
+        return $("//input[@placeholder='Select brand']")
+    }
     get txtMinPrice(){
         return $("//button[normalize-space()='Price (Rs)']/parent::div//input[@aria-label='Min']")
     }
     get txtMaxPrice(){
         return $("//button[normalize-space()='Price (Rs)']/parent::div//input[@aria-label='Max']")
     }
+    get btnRestetBrand(){
+        return $("//button[@type='reset']")
+    }
     get btnApplyPrice(){
+        return $("//button[normalize-space()='Select brand']/parent::div//button[contains(@class,'apply')]")
+    }
+    get btnApplyBrand(){
         return $("//button[normalize-space()='Price (Rs)']/parent::div//button[contains(@class,'apply')]")
     }
     get btnCars(){
