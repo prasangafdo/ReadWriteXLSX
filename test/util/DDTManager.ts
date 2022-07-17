@@ -31,7 +31,7 @@ class DDTManager{
             await Vehicles.txtMaxPrice.setValue(data.max_price)
             await Vehicles.btnApplyPrice.click()
             let elementsArray = []
-            await Vehicles.getAllAds().then(function (ttt) {
+            await Vehicles.lnkAds.then(function (ttt) {
                 for (let element of ttt){
                     elementsArray.push(element)
                 }
@@ -41,10 +41,10 @@ class DDTManager{
 
             for (let vehicle of elementsArray){
                 // console.log('}}}}}}}}}}}}}}}}',await vehicle.getText())
+                await browser.waitUntil(
+                    async ()=>vehicle.isExisting()
+                )
                 await vehicle.click()
-                // await browser.waitUntil(
-                //     async ()=>VehicleDetails.lblAdTitle.isExisting()
-                // )
                 if(!await VehicleDetails.lblAdTitle.isDisplayed()){
                     await VehicleDetails.lblAdTitle.waitForDisplayed({timeout:60000})
 
