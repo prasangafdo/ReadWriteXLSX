@@ -45,7 +45,10 @@ describe('Ikman.lk', () => {
         expect(await Vehicle.lblVehiclesTopic).toBeDisplayed()
         expect(await Vehicle.lblVehiclesTopic).toHaveText('Vehicles')
 
-await DDTManager.performDDT()
+
+
+        let elements = await DDTManager.performDDT()
+        await DDTManager.openAdvertisementsByElement(elements)
         // expect(await Vehicle.lblLocation.getText()).toHaveText('Colombo')
         // await Vehicle.btnCars.click()
         // await Vehicle.btnPrice.click()
