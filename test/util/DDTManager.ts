@@ -82,7 +82,7 @@ class DDTManager{
 
             await Vehicles.lnkAds.then(function (ttt) {
                 for (let element of ttt){
-                    elementsArray.push(element)
+                    elementsArray.push(element) //Elements are not getting pushed. Need to check here
                 }
             })
         }
@@ -110,9 +110,13 @@ class DDTManager{
 
                 console.log('--->', await VehicleDetails.lblAdTitle.getText())
             }
-            await VehicleDetails.lblAdTitle.waitForDisplayed({timeout: 60000}).then(function (ttt) {
-                console.log('--->', ttt)
-            })
+            console.log('--->', await VehicleDetails.lblAdTitle.getText())
+            await VehicleDetails.btnShowPhoneNumber.click()
+            console.log('--->', await VehicleDetails.lblPhoneNumber.getText())
+            console.log('--->', await VehicleDetails.lblYear.getText())
+            console.log('--->', await VehicleDetails.lblPrice.getText())
+            console.log('--->', await VehicleDetails.lblLocation.getText())
+
             // console.log('--->',await VehicleDetails.lblAdTitle.getText())
             await browser.back()
             //         }
