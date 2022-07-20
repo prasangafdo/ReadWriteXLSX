@@ -66,6 +66,7 @@ class DDTManager{
     // }
 
     async performDDT(){ //Returning ads list in page 1
+        await browser.pause(3000)
         let elementsArray = []
         for (let data of this.getAllCarsTestDataFromExcel()){
 
@@ -79,49 +80,72 @@ class DDTManager{
             await Vehicles.txtMinPrice.setValue(data.min_price)//Add a clear value
             await Vehicles.txtMaxPrice.setValue(data.max_price)
             await Vehicles.btnApplyPrice.click()
+            await browser.pause(5000)
 
             await Vehicles.lnkAds.then(function (ttt) {
                 for (let element of ttt){
                     elementsArray.push(element) //Elements are not getting pushed. Need to check here
                 }
             })
+
+            ////////
+            for (let vehicle of elementsArray) {
+                // console.log('}}}}}}}}}}}}}}}}',await vehicle.getText())
+                await browser.waitUntil(
+                    async () => vehicle.isExisting()
+                )
+                await vehicle.click()
+                if (!await VehicleDetails.lblAdTitle.isDisplayed()) {
+                    await VehicleDetails.lblAdTitle.waitForDisplayed({timeout: 60000})
+
+                    console.log('--->', await VehicleDetails.lblAdTitle.getText())
+                }
+                console.log('--->', await VehicleDetails.lblAdTitle.getText())
+                await VehicleDetails.btnShowPhoneNumber.click()
+                console.log('--->', await VehicleDetails.lblPhoneNumber.getText())
+                console.log('--->', await VehicleDetails.lblYear.getText())
+                console.log('--->', await VehicleDetails.lblPrice.getText())
+                console.log('--->', await VehicleDetails.lblLocation.getText())
+                await browser.back()
+
+            }//////
         }
         return elementsArray
     }
 
-    async openAdvertisementsByElement(elementsArray) {
-        elementsArray.forEach(aaa=>{
-            aaa.then(function (abc) {
-                console.log('abc resolved', abc.getText())
-            })
-            (async () => console.log(']]]',await aaa.getText())
-            )()
-        })
-
-
-        for (let vehicle of elementsArray) {
-            // console.log('}}}}}}}}}}}}}}}}',await vehicle.getText())
-            await browser.waitUntil(
-                async () => vehicle.isExisting()
-            )
-            // await vehicle.click()
-            if (!await VehicleDetails.lblAdTitle.isDisplayed()) {
-                await VehicleDetails.lblAdTitle.waitForDisplayed({timeout: 60000})
-
-                console.log('--->', await VehicleDetails.lblAdTitle.getText())
-            }
-            console.log('--->', await VehicleDetails.lblAdTitle.getText())
-            await VehicleDetails.btnShowPhoneNumber.click()
-            console.log('--->', await VehicleDetails.lblPhoneNumber.getText())
-            console.log('--->', await VehicleDetails.lblYear.getText())
-            console.log('--->', await VehicleDetails.lblPrice.getText())
-            console.log('--->', await VehicleDetails.lblLocation.getText())
-
-            // console.log('--->',await VehicleDetails.lblAdTitle.getText())
-            await browser.back()
-            //         }
-        }
-    }
+    // async openAdvertisementsByElement(elementsArray) {
+    //     // elementsArray.forEach(aaa=>{
+    //     //     aaa.then(function (abc) {
+    //     //         console.log('abc resolved', abc.getText())
+    //     //     })
+    //     //     (async () => console.log(']]]',await aaa.getText())
+    //     //     )()
+    //     // })
+    //
+    //
+    //     for (let vehicle of elementsArray) {
+    //         // console.log('}}}}}}}}}}}}}}}}',await vehicle.getText())
+    //         await browser.waitUntil(
+    //             async () => vehicle.isExisting()
+    //         )
+    //         // await vehicle.click()
+    //         if (!await VehicleDetails.lblAdTitle.isDisplayed()) {
+    //             await VehicleDetails.lblAdTitle.waitForDisplayed({timeout: 60000})
+    //
+    //             console.log('--->', await VehicleDetails.lblAdTitle.getText())
+    //         }
+    //         console.log('--->', await VehicleDetails.lblAdTitle.getText())
+    //         await VehicleDetails.btnShowPhoneNumber.click()
+    //         console.log('--->', await VehicleDetails.lblPhoneNumber.getText())
+    //         console.log('--->', await VehicleDetails.lblYear.getText())
+    //         console.log('--->', await VehicleDetails.lblPrice.getText())
+    //         console.log('--->', await VehicleDetails.lblLocation.getText())
+    //
+    //         // console.log('--->',await VehicleDetails.lblAdTitle.getText())
+    //         await browser.back()
+    //         //         }
+    //     }
+    // }
 
 }
 export default new DDTManager();
