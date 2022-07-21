@@ -48,7 +48,13 @@ describe('Ikman.lk', () => {
 
 
         let elements = await DDTManager.performDDT()
-        await DDTManager.openAdvertisementsByElement(elements)
+        // await DDTManager.openAdvertisementsByElement(elements)
+
+
+
+
+
+
         // expect(await Vehicle.lblLocation.getText()).toHaveText('Colombo')
         // await Vehicle.btnCars.click()
         // await Vehicle.btnPrice.click()

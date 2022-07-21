@@ -68,6 +68,7 @@ class DDTManager{
     async performDDT(){ //Returning ads list in page 1
         await browser.pause(3000)
         let elementsArray = []
+        let details = [{}]
         for (let data of this.getAllCarsTestDataFromExcel()){
 
             await $("//span[normalize-space()='"+data.District+"']/ancestor::a").click()
@@ -87,8 +88,6 @@ class DDTManager{
                     elementsArray.push(element) //Elements are not getting pushed. Need to check here
                 }
             })
-
-            ////////
             for (let vehicle of elementsArray) {
                 // console.log('}}}}}}}}}}}}}}}}',await vehicle.getText())
                 await browser.waitUntil(
@@ -102,10 +101,21 @@ class DDTManager{
                 }
                 console.log('--->', await VehicleDetails.lblAdTitle.getText())
                 await VehicleDetails.btnShowPhoneNumber.click()
+
                 console.log('--->', await VehicleDetails.lblPhoneNumber.getText())
                 console.log('--->', await VehicleDetails.lblYear.getText())
                 console.log('--->', await VehicleDetails.lblPrice.getText())
                 console.log('--->', await VehicleDetails.lblLocation.getText())
+
+                let cars = [{//phone will be added later
+                    title: await VehicleDetails.lblPhoneNumber.getText(),
+                    year: await VehicleDetails.lblYear.getText(),
+                    price: await VehicleDetails.lblPrice.getText(),
+                    location: await VehicleDetails.lblLocation.getText()
+                }]
+
+                console.log(cars)
+
                 await browser.back()
 
             }//////
