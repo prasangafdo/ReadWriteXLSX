@@ -107,14 +107,17 @@ class DDTManager{
                 console.log('--->', await VehicleDetails.lblPrice.getText())
                 console.log('--->', await VehicleDetails.lblLocation.getText())
 
-                let cars = [{//phone will be added later
+                let cars = [{
                     title: await VehicleDetails.lblPhoneNumber.getText(),
                     year: await VehicleDetails.lblYear.getText(),
                     price: await VehicleDetails.lblPrice.getText(),
-                    location: await VehicleDetails.lblLocation.getText()
+                    location: await VehicleDetails.lblLocation.getText(),
+                    phone: await VehicleDetails.lblPhoneNumber.getText()
                 }]
 
                 console.log(cars)
+
+                let ws = XSLS/
 
                 await browser.back()
 
