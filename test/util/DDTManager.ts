@@ -117,7 +117,6 @@ class DDTManager{
 
                 console.log(cars)
 
-                let ws = XSLS/
 
                 await browser.back()
 
