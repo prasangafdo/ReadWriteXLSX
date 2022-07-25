@@ -2,6 +2,7 @@ import ExcelReader from '../util/ExcelReader';
 import Vehicles from '../pageobjects/vehicles.page';
 import VehicleDetails from '../pageobjects/vehicle.details.page';
 const testDataFile = './test/testdata/TestData.xlsx'
+import excelWriter from '../util/ExcelWriter';
 
 class DDTManager{
 
@@ -116,6 +117,8 @@ class DDTManager{
                 }]
 
                 console.log(cars)
+
+                excelWriter.excelToJson("Cars",cars)
 
 
                 await browser.back()
