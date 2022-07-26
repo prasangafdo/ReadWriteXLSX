@@ -70,6 +70,8 @@ class DDTManager{
         await browser.pause(3000)
         let elementsArray = []
         let details = [{}]
+        let carsList = []
+
         for (let data of this.getAllCarsTestDataFromExcel()){
 
             await $("//span[normalize-space()='"+data.District+"']/ancestor::a").click()
@@ -85,6 +87,8 @@ class DDTManager{
             await browser.pause(5000)
 
             await Vehicles.lnkAds.then(function (ttt) {
+
+
                 for (let element of ttt){
                     elementsArray.push(element) //Elements are not getting pushed. Need to check here
                 }
@@ -118,12 +122,13 @@ class DDTManager{
 
                 console.log(cars)
 
-                excelWriter.excelToJson("Cars",cars)
-
+                 carsList.push(cars)
 
                 await browser.back()
 
             }//////
+            console.log(carsList)
+            excelWriter.excelToJson("Cars",carsList)
         }
         return elementsArray
     }

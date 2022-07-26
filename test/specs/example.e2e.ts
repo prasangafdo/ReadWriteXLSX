@@ -47,40 +47,11 @@ describe('Ikman.lk', () => {
         expect(await Vehicle.lblVehiclesTopic).toBeDisplayed()
         expect(await Vehicle.lblVehiclesTopic).toHaveText('Vehicles')
 
-
-
         let elements = await DDTManager.performDDT()
         // await DDTManager.openAdvertisementsByElement(elements)
 
-
-
-
-
-
-        // expect(await Vehicle.lblLocation.getText()).toHaveText('Colombo')
-        // await Vehicle.btnCars.click()
-        // await Vehicle.btnPrice.click()
-        // await Vehicle.txtMinPrice.setValue('100000')
-        // await Vehicle.txtMaxPrice.setValue('1000000')
-        // await Vehicle.btnApplyPrice.click()
-        // // await Vehicle.getAllAds()
-        // await VehicleDetails.allAdDetails()
-        // await VehicleDetails.getAAA(await VehicleDetails.allAdDetails())
-        // await browser.pause(5000)
     }).timeout(900000);
 
-    // it('Write to excel', async() =>{
-    //
-    //     let data = [{"name":"tester", "age":30, "car":"sss"},
-    //         {"name":"tester2", "age":42, "car":"Esteem"}
-    //     ]
-    //     excelToJson.excelToJson( 'Cars', data)
-    //
-    //     let data2 = [{"name":"Ester", "age":12, "car":"Pantera"},
-    //         {"name":"Astor", "age":13, "car":"Linclon"}
-    //     ]
-    //     excelToJson.excelToJson( 'Cars', data2)
-    // })
 });
 
 
